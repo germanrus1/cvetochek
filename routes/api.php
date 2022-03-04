@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TGBotController;
 /*
@@ -13,20 +14,7 @@ use App\Http\Controllers\TGBotController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-//$token = '5167994619:AAFHpGFYaeqtkeIMKvY6sKorQS0FNbelrxg';
-//$bot = new \TelegramBot\Api\Client($token);
-//var_dump($bot);
-//die;
-
-//// команда для start
-//$bot->command('start', function ($message) use ($bot) {
-//    $answer = 'Добро пожаловать, цветочки!';
-//    $bot->sendMessage($message->getChat()->getId(), $answer);
-//});
-
-
-Route::get('/', [TGBotController::class, 'index']);
+Route::any('/', [TGBotController::class, 'index']);
 
 //Route::resource('/', 'TGBotController')->only([
 //    'index',
