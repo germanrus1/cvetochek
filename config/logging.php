@@ -48,6 +48,12 @@ return [
     */
 
     'channels' => [
+        'checkBot' => [
+            'driver' => 'stack',
+            'path' => storage_path('logs/var_check.log'),
+            'ignore_exceptions' => false,
+        ],
+
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],
